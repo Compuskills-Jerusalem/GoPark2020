@@ -1,0 +1,17 @@
+﻿@model IEnumerable<GoPark.Models.Discount>
+
+    
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@ViewBag.Message</h2>
+<h1>Reserve spot page</h1>
+
+@foreach(var dis in Model)
+{
+    <h1>Hello there</h1>
+    <h1>@dis.DiscountName</h1>
+}
+

@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "SignIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <script type="text/javascript">
+
+        $("#ReserveSpot").click(function () {
+            window.location.href = '@Url.Action("Index", "ReserveSpot" )';
+        });
+
+         $("#SignUp").click(function () {
+            window.location.href = '@Url.Action("SignUp", "ReserveSpot" )';
+         });
+
+    </script>
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Sign In</h5>
+                    <form class="form-signin">
+                        <div class="form-label-group">
+                            <input type="email" id="inputEmail" class="form-control" placeholder="User full name" required autofocus>
+                            <label for="inputEmail">User full name</label>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Passport" required>
+                            <label for="inputPassword">Passport number</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Remember password</label>
+                        </div>
+                        <button id="ReserveSpot" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+                        <hr class="my-4">
+                        <button id="SignUp" class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> You dont have an account? Create one!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*<h2>SignIn</h2>
+    <h1>Name:</h1>
+    <input />
+    <h1>Passport number</h1>
+    <input />
+    <button style="display:block" id="ReserveSpot">SignIn</button>
+    <h3><a id="SignUp">you don't have an account? create one</a></h3>*@
+

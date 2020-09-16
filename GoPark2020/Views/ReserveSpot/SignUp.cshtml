@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <script type="text/javascript">
+
+        $("#SaveUserDetails").click(function () {
+            window.location.href = '@Url.Action("ConfirmAccount", "ReserveSpot" )';
+         });
+
+    </script>
+}
+
+<h2>SignUp</h2>
+
+<h1> Create my account</h1>
+
+<h2>name</h2>
+<input />
+<h2>passport number</h2>
+<input />
+<h2>cell phone number</h2>
+<input />
+<h2>house number</h2>
+<input />
+<h4>Are you handicaped?</h4>
+<input type="checkbox" />
+
+<button id="SaveUserDetails" style="display:block"> Save </button>

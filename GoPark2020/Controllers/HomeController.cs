@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace GoPark2020.Controllers
+namespace GoPark.Controllers
 {
     public class HomeController : Controller
     {
@@ -24,6 +24,11 @@ namespace GoPark2020.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult SignUp()
+        {
             return View();
         }
     }

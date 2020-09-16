@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "ConfirmAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <script type="text/javascript">
+
+        $("#ReserveSpot").click(function () {
+            window.location.href = '@Url.Action("Index", "ReserveSpot" )';
+         });
+
+    </script>
+}
+
+<h2>ConfirmAccount</h2>
+
+<h1> You're account has succesfully been created!</h1>
+
+<button id="ReserveSpot">reserve Spot</button>
