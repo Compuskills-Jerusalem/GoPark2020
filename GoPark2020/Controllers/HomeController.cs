@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace GoPark.Controllers
+namespace GoPark2020.Controllers
 {
     public class HomeController : Controller
     {
@@ -27,9 +27,6 @@ namespace GoPark.Controllers
             return View();
         }
 
-        public ActionResult SignUp()
-        {
-            return View();
-        }
+      
     }
 }

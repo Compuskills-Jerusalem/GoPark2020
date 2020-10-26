@@ -7,8 +7,12 @@
 @section Scripts{
     <script type="text/javascript">
 
-        $("#Reserve").click(function () {
+        $("#LogIn").click(function () {
             window.location.href = '@Url.Action("SignIn", "ReserveSpot" )';
+        });
+
+        $("#SignUp").click(function () {
+            window.location.href = '@Url.Action("SignUp", "ReserveSpot" )';
          });
 
     </script>
@@ -19,5 +23,7 @@
 <div class="welcome">
     <h1>Welcome to our parking lot!</h1>
     <p class="lead">We have 50 empty spots!</p>
-    <button id="Reserve" class=" btn btn-primary btn-lg">reserve a spot &raquo;</button>
+    <button id="LogIn" class=" btn btn-primary btn-lg">Log in and then reserve a spot &raquo;</button>
+    <button id="SignUp" class=" btn btn-primary btn-lg">Sign up &raquo;</button>
+
 </div>

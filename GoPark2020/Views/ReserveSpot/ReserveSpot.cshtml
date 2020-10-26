@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "ReserveSpot";
+}
+@section Scripts{
+<script type="text/javascript">
+
+       
+
+    $(".ConfirmSpot").click(function () {
+            window.location.href = '@Url.Action("ConfirmSpot", "ReserveSpot" )';
+         });
+
+</script>
+}
+
+<h2>ReserveSpot</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div id="ParkingLot" style="background-color:aqua">
+                <h1>Our parking Lot</h1>
+            </div>
+        </div>
+    </div>
+</div>
+@*this butoon is getting a default spot*@
+<button  class="ConfirmSpot btn btn-primary btn-lg">Get the first available spot  &raquo;</button>
+
+<button  class="ConfirmSpot btn btn-primary btn-lg">Confirm spot &raquo;</button>
+
+

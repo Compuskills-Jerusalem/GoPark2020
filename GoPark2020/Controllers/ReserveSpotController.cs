@@ -3,36 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using GoPark.Models;
-using GoParkDB.DataSource;
-using GoParkDB.Models;
+using System.Data.Entity;
+using GoPark2020.Models;
+using GoParkDB2020.DataSource;
+using GoParkDB2020.Models;
 
 
-namespace GoPark.Controllers
+
+
+
+namespace GoPark2020.Controllers
 {
     public class ReserveSpotController : Controller
     {
         // GET: ReserveSpot
         public ActionResult Index()
         {
-            GoParkDB.Models.Discount discount = new GoParkDB.Models.Discount() { };
-            var dis = discount.DiscountID;
-            //ViewBag.Message = "Lets see if you work.😍";
+            //GoParkDB2020.Models.Discount discount = new GoParkDB2020.Models.Discount() { };
+            //var dis = discount.DiscountID;
+            ////ViewBag.Message = "Lets see if you work.😍";
 
-            using (var ctx = new GoParkContext())
-            {
-                var lines = ctx.Discounts
-                    .Select(x => new GoPark.Models.Discount
-                    {
-                        DiscountName = x.DiscountName
+            //using (var ctx = new GoParkContext())
+            //{
+            //    var lines = ctx.Discounts
+            //        .Select(x => new GoPark2020.Models.Discount
+            //        {
+            //            DiscountName = x.DiscountName
 
-                    }).ToList();
-
-
+            //        }).ToList();
 
 
-                return View(lines);
-            }
+
+
+            //    return View(lines);
+            //}
+            return View();
         }
         public ActionResult SignIn()
         {
@@ -46,6 +51,14 @@ namespace GoPark.Controllers
        }
 
         public ActionResult ConfirmAccount()
+        {
+            return View();
+        }
+        public ActionResult ReserveSpot()
+        {
+            return View();
+        }
+         public ActionResult ConfirmSpot()
         {
             return View();
         }

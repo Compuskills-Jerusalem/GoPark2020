@@ -1,13 +1,13 @@
 ﻿
 @{
-    ViewBag.Title = "SignIn";
+    ViewBag.Title = "LogIn";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section Scripts{
     <script type="text/javascript">
 
         $("#ReserveSpot").click(function () {
-            window.location.href = '@Url.Action("Index", "ReserveSpot" )';
+            window.location.href = '@Url.Action("ReserveSpot", "ReserveSpot" )';
         });
 
          $("#SignUp").click(function () {
@@ -37,7 +37,7 @@
                             <input type="checkbox" class="custom-control-input" id="customCheck1">
                             <label class="custom-control-label" for="customCheck1">Remember password</label>
                         </div>
-                        <button id="ReserveSpot" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+                        <button id="ReserveSpot" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Reserve a spot</button>
                         <hr class="my-4">
                         <button id="SignUp" class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> You dont have an account? Create one!</button>
                     </form>
@@ -46,7 +46,7 @@
         </div>
     </div>
 </div>
-@*<h2>SignIn</h2>
+@*<h2>LogIn</h2>
     <h1>Name:</h1>
     <input />
     <h1>Passport number</h1>
