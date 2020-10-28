@@ -2,6 +2,24 @@
 @{
     ViewBag.Title = "ConfirmSpot";
 }
+@section Scripts{
+    <script type="text/javascript">
 
-<h2>ConfirmSpot</h2>
+        $("#Back").click(function () {
+            window.location.href = '@Url.Action("ReserveSpot", "ReserveSpot" )';
+        });
+
+         $("#Finish").click(function () {
+            window.location.href = '@Url.Action("Index", "Home" )';
+         });
+
+    </script>
+}
+<h2>Confirm Spot-page</h2>
+<br />
+<br />
+<h3>Your spot is::<br /> row 2 lot 12</h3>
+
+<button id="Back">Back </button>
+<button id="Finish" style="display:block"> Finish </button>
 
