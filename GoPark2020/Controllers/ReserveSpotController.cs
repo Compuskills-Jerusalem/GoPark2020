@@ -20,23 +20,23 @@ namespace GoPark2020.Controllers
         public ActionResult Index()
         {
             //GoParkDB2020.Models.Discount discount = new GoParkDB2020.Models.Discount() { };
-            //var dis = discount.DiscountID;
-            ////ViewBag.Message = "Lets see if you work.😍";
+            //var dis = discount.DiscountName;
+            //////ViewBag.Message = "Lets see if you work.😍";
+            //ViewBag.Message = dis;
+            ////using (var ctx = new GoParkContext())
+            ////{
+            ////    var lines = ctx.Discounts
+            ////        .Select(x => new GoPark2020.Models.Discount
+            ////        {
+            ////            DiscountName = x.DiscountName
 
-            //using (var ctx = new GoParkContext())
-            //{
-            //    var lines = ctx.Discounts
-            //        .Select(x => new GoPark2020.Models.Discount
-            //        {
-            //            DiscountName = x.DiscountName
-
-            //        }).ToList();
-
-
+            ////        }).ToList();
 
 
-            //    return View(lines);
-            //}
+
+
+            ////    return View(lines);
+            ////}
             return View();
         }
         public ActionResult SignIn()
@@ -47,8 +47,8 @@ namespace GoPark2020.Controllers
         public ActionResult SignUp()
         {
             return View();
-                
-       }
+
+        }
 
         public ActionResult ConfirmAccount()
         {
@@ -58,7 +58,7 @@ namespace GoPark2020.Controllers
         {
             return View();
         }
-         public ActionResult ConfirmSpot()
+        public ActionResult ConfirmSpot()
         {
             return View();
         }
