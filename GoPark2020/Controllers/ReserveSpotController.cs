@@ -1,48 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using System.Data.Entity;
+using GoPark2020;
 using GoPark2020.Models;
-using GoParkDB2020.DataSource;
-using GoParkDB2020.Models;
-
-
-
-
 
 namespace GoPark2020.Controllers
 {
     public class ReserveSpotController : Controller
     {
+        private GoParkContext db = new GoParkContext();
         // GET: ReserveSpot
         public ActionResult Index()
         {
-            //GoParkDB2020.Models.Discount discount = new GoParkDB2020.Models.Discount() { };
-            //var dis = discount.DiscountName;
-            //////ViewBag.Message = "Lets see if you work.😍";
-            //ViewBag.Message = dis;
-            ////using (var ctx = new GoParkContext())
-            ////{
-            ////    var lines = ctx.Discounts
-            ////        .Select(x => new GoPark2020.Models.Discount
-            ////        {
-            ////            DiscountName = x.DiscountName
-
-            ////        }).ToList();
-
-
-
-
-            ////    return View(lines);
-            ////}
-            return View();
+            return View(db.Users.ToList());
         }
+
         public ActionResult SignIn()
         {
             return View();
         }
+        // POST: User/Create
+        //[HttpPost]
+        //public ActionResult CreateUser(GoParkDB2020.Models.User model)
+        //{
+        //    try
+        //    {
+        //        if (ModelState.IsValid)
+        //        {
+        //            using (var ctx = new GoParkContext())
+        //            {
+        //                var user = new GoParkDB2020.Models.User
+        //                {
+        //                    FirstName = model.FirstName,
+        //                    RequiresHandicapAccomodation = model.RequiresHandicapAccomodation,
+        //                    PassportNumber = model.PassportNumber
+        //                };
+        //                ctx.Users.Add(user);
+        //                ctx.SaveChanges();
+
+                        //return RedirectToAction("SignUp",);
+        //            }
+        //        }
+        //        else
+        //        {
+        //            return View(model);
+        //        }
+        //    }
+        //    catch
+        //    {
+        //    }
+
+        //    return View(model);
+        //}
 
         public ActionResult SignUp()
         {
