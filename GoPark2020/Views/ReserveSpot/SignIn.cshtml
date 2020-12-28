@@ -8,31 +8,32 @@
 @section Scripts{
     <script type="text/javascript">
 
+
         $("#ReserveSpot").click(function () {
-            if(re)
+
             window.location.href = '@Url.Action("ReserveSpot", "ReserveSpot" )';
         });
 
          $("#SignUp").click(function () {
-            window.location.href = '@Url.Action("SignUp", "ReserveSpot" )';
+            window.location.href = '@Url.Action("Create", "Users" )';
          });
 
 
-        function onSuccess(googleUser) {
-            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-        }
-        function onFailure(error) {
-            console.log(error);
-        }
-        function renderButton() {
-            gapi.signin2.render('signin2', {
-                'scope': 'profile email',
+        //function onSuccess(googleUser) {
+        //    console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        //}
+        //function onFailure(error) {
+        //    console.log(error);
+        //}
+        //function renderButton() {
+        //    gapi.signin2.render('signin2', {
+        //        'scope': 'profile email',
 
 
-                'onsuccess': onSuccess,
-                'onfailure': onFailure
-            });
-        }
+        //        'onsuccess': onSuccess,
+        //        'onfailure': onFailure
+        //    });
+        //}
     </script>
 
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>

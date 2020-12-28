@@ -5,8 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using GoPark2020.Models;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace GoPark2020.DataSource
+
+namespace GoPark2020
 {
     public class GoParkContext : DbContext
     {
@@ -20,6 +22,10 @@ namespace GoPark2020.DataSource
         public DbSet<User> Users { get; set; }
         public DbSet<UserDiscount>UserDiscounts  { get; set; }
         public DbSet<UserParkingLot>  UserParkingLots{ get; set; }
- 
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
     }
 }

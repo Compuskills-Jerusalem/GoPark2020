@@ -1,19 +1,46 @@
-﻿@*@model IEnumerable<GoPark2020.Models.Discount>
-
-    
+﻿@*@model IEnumerable<GoPark2020.Models.User>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>@ViewBag.Message</h2>
-<h1>Reserve spot page</h1>
+<h2>Index</h2>
 
-@foreach(var dis in Model)
-{
-    <h1>Hello there</h1>
-    <h1>@dis.DiscountName</h1>
-}*@
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequiresHandicapAccomodation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassportNumber)
+        </th>
+        <th></th>
+    </tr>
 
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequiresHandicapAccomodation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PassportNumber)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.UserID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.UserID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.UserID })
+            </td>
+        </tr>
+    }
 
-
+</table>*@

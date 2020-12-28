@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using GoPark2020.Models;
 
 namespace GoPark2020.Controllers
 {
     public class HomeController : Controller
     {
+        private GoParkContext db = new GoParkContext();
+        private User user = new User();
+
         public ActionResult Index()
         {
-            return View();
+            return View(user.FirstName);
         }
-
+        
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

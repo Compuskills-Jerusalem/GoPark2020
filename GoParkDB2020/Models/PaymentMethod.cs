@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoParkDB2020.Models
+namespace GoPark2020.Models
 {
     public class PaymentMethod
     {
