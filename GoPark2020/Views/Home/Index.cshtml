@@ -1,4 +1,5 @@
-﻿
+﻿@model GoPark2020.Models.User
+
 @{
     ViewBag.Title = "Home Page";
 
@@ -19,11 +20,17 @@
 }
 
 
+@using (Html.BeginForm())
+{
+    <div class="welcome">
 
-<div class="welcome">
-    <h1>Welcome to our parking lot!</h1>
-    <p class="lead">We have 50 empty spots!</p>
-    <button id="LogIn" class=" btn btn-primary btn-lg">Log in and then reserve a spot &raquo;</button>
-    <button id="SignUp" class=" btn btn-primary btn-lg">Sign up &raquo;</button>
+        @Html.DisplayFor(model => model.FirstName)
+        <h1>
+            Welcome to our parking lot!
+        </h1>
+        <p class="lead">We have 50 empty spots!</p>
+        <button id="LogIn" class=" btn btn-primary btn-lg">Log in and then reserve a spot &raquo;</button>
+        <button id="SignUp" class=" btn btn-primary btn-lg">Sign up &raquo;</button>
 
-</div>
+    </div>
+}
